@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Travel.Models.GroupModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div style="font-family:Arial">
+    <h2>Employee List</h2>
+    <p>
+        @using (@Html.BeginForm("Index", "GroupSearch", FormMethod.Get))
+        {
+            @Html.AntiForgeryToken()
+
+            <b>Search By:</b>
+
+            var list = new SelectList(new[]
+                {
+                            new {ID="CoxsBazar", Name="CoxsBazar"},
+                            new {ID="Sajek", Name="Sajek"},
+                            new {ID="BogaLake", Name="BogaLake"},
+
+                     },
+                "ID", "Name", 1);
+
+            @Html.DropDownList("list", list , "Select Area")
+           
+            <input type="submit" value="search" />
+        }
+    </p>
+    <table border="1">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GroupId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NoofFemale)
+            </th>
+            <th>
+               @Html.DisplayNameFor(model => model.NoOfMale)
+            </th>
+           
+            
+            <th>Action</th>
+        </tr>
+        @if (Model==null)
+        {
+            <tr>
+                <td colspan="4">
+                    No records match search criteria
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                
+                <tr>
+                    
+                <td>
+                    @Html.DisplayFor(modelItem => item.GroupId)
+                </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoofFemale)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NoOfMale)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AgeMax)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AgeMin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Area)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new { id = item.GroupId }) |
+                    </td>
+                </tr>
+            }
+
+        }
+    </table>
+</div> 

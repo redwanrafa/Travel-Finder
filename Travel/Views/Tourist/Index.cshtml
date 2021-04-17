@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h2>Home</h2>
+
+<table>
+    <tr><td><a href="/Tourist/ProfileDetails"> Your Profile </td></tr>
+    <tr> <td><a href="/Tourist/GroupRegister"> Group Register </a></td></tr>
+
+    <tr><td> @Html.ActionLink("Group Search","Index", "GroupSearch")</td></tr>
+  
+
+    <tr><td> @Html.ActionLink("GuideSearch", "Index", "GuideSearch")</td></tr>
+    <tr><td> @Html.ActionLink("SeeRequest", "Index", "SeeRequest")</td></tr>
+    <tr><td> @Html.ActionLink("GroupProfile", "Index", "GroupProfile")</td></tr>
+    
+    <tr><td> <a href="/Shared/Logout"> Logout</a></td></tr>
+ 
+</table>

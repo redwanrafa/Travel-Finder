@@ -1,0 +1,50 @@
+﻿@model ICollection<Travel.Models.TourGuideGroupModel>
+@{
+    ViewBag.Title = "ViewTour";
+}
+
+<h2>ViewTour</h2>
+
+<h2>ViewGuide</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <strong>Guide List</strong>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Tour ID</th>
+                            <th>Guide ID</th>
+                            <th>Guide Name</th>
+                            <th>Total Money</th>
+                            <th>Start Date</th>
+                            <th>No Of Days</th>
+                            <th>Area</th>
+                            
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.TourId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.MoneyCal)</td>
+                                <td>@Html.DisplayFor(modelItem => item.StartDate)</td>
+                                <td>@Html.DisplayFor(modelItem => item.NoOfDays)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Area)</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="myscript.js"></script>
+    <script></script>
+}

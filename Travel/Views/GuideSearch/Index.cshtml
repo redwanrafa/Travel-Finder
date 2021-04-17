@@ -1,0 +1,109 @@
+﻿@model IEnumerable<Travel.Models.GuideModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>GuideSearch</h2>
+<p>
+    @using (@Html.BeginForm("Index", "GuideSearch", FormMethod.Get))
+    {
+        @Html.AntiForgeryToken()
+
+        <b>Search By:</b>
+
+        var list = new SelectList(new[]
+            {
+                            new {ID="Chittagong", Name="Chittagong"},
+                            new {ID="Sajek", Name="Sajek"},
+                            new {ID="bh", Name="bh"},
+
+                     },
+            "ID", "Name", 1);
+
+        @Html.DropDownList("list", list, "Select Area")
+
+        <input type="submit" value="search" />
+    }
+</p>
+
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.GuideName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.GuideEmail)
+        </th>
+       
+        
+        <th>
+            @Html.DisplayNameFor(model => model.GuideContact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuideGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuideLanguages)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfTour)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.GuideRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuideArea)
+        </th>
+        
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideDOB)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideGender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideLanguages)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoOfTour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideRating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuideArea)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Hire", "Hire", new {  id=item.GuideId  }) 
+         
+        </td>
+    </tr>
+}
+
+</table>

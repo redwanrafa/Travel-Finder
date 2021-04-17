@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Travel.Models.TourModel>
+
+@{
+    ViewBag.Title = "TourList";
+}
+
+<h2>TourList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TourId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GuideId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupFormedId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoneyCal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfDays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TourId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GuideId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupFormedId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroupId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoneyCal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfDays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+
+                @Html.ActionLink("Done", "Done", new { id = item.TourId })
+            </td>
+        </tr>
+    }
+
+</table>

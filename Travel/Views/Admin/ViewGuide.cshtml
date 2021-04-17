@@ -1,0 +1,55 @@
+﻿@model ICollection<TravelEntity.Guide>
+@{
+    ViewBag.Title = "ViewGuide";
+}
+
+<h2>ViewGuide</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <strong>Guide List</strong>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Contact No</th>
+                            <th>Gender</th>
+                            <th>DOB</th>
+                            <th>Address</th>
+                            <th>Languages</th>
+                            <th>No Of Tour</th>
+                            <th>Status</th>
+                            <th>Area</th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.GuideId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideEmail)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideContact)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideGender)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideDOB)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideAddress)</td>
+                                <td>@Html.DisplayFor(modelItem => item.NoOfTour)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideStatus)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GuideArea)</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="myscript.js"></script>
+    <script></script>
+}
+

@@ -1,0 +1,66 @@
+﻿@model Travel.Models.GroupModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>GroupModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfMale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfMale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoofFemale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoofFemale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.GroupFormed)
+        </dd>
+
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GroupId }) 
+    @Html.ActionLink("Back to List", "Index")
+</p>

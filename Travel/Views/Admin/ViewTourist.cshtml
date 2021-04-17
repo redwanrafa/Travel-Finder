@@ -1,0 +1,50 @@
+﻿@model ICollection<TravelEntity.Tourist>
+@{
+    ViewBag.Title = "ViewTourist";
+}
+
+
+<h2>ViewTourist</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <strong>Tourist List</strong>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Contact No</th>
+                            <th>Gender</th>
+                            <th>DOB</th>
+                            <th>Address</th>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.TouristId)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TouristName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TouristEmail)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TouristContactNo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TouristGender)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TouristDOB)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TouristAddress)</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="myscript.js"></script>
+    <script></script>
+}
+

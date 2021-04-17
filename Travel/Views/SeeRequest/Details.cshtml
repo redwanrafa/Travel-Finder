@@ -1,0 +1,53 @@
+﻿@model Travel.Models.TouristModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TouristModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+      
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristGender)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

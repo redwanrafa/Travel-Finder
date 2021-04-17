@@ -1,0 +1,83 @@
+﻿@model Travel.Models.TouristModel
+
+@{
+    ViewBag.Title = "ProfileDetails";
+}
+
+<h2>ProfileDetails</h2>
+
+<div>
+    <h4>TouristModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristDOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristDOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TouristPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TouristPassword)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Change Password", "Edit", new { id =Model.TouristId }) |
+    @Html.ActionLink("Back to Desk", "Index")
+</p>

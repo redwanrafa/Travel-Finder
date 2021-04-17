@@ -1,0 +1,48 @@
+﻿@model Travel.Models.AdminModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>AdminModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdminName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdminEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdminUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdminUserName)
+        </dd>
+
+        
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit Profile", "EditProfile")
+    @Html.ActionLink("View Tourists", "ViewTourist")
+    @Html.ActionLink("View Guides", "ViewGuide")
+    @Html.ActionLink("View Tour", "ViewTour")
+    
+</p>

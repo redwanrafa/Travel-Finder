@@ -1,0 +1,148 @@
+﻿@model Travel.Models.GuideModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>GuideModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideNID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideNID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideDOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideDOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideContact)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideContact)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideLanguages)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideLanguages)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoOfTour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoOfTour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideRating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuidePassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuidePassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GuideCPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GuideCPassword)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.GuideId }) 
+    @Html.ActionLink("Money", "Money", new { id = Model.GuideId })
+    @Html.ActionLink("TourList", "TourList", new { id = Model.GuideId })
+    @Html.ActionLink("Logout", "Logout")
+</p>

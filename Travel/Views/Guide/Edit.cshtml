@@ -1,0 +1,47 @@
+﻿@model Travel.Models.GuideModel
+
+@using (Html.BeginForm())
+{
+
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Active",
+        Value = "Active"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Busy",
+        Value = "Busy",
+        Selected = true
+    });
+   
+
+
+    @Html.DropDownListFor(model => model.GuideStatus, listItems, "-- Select Status --")
+    <input type="submit" value="Submit" />
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

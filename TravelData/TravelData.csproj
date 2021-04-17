@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C40777D-FF6E-4B00-B042-66ED4D0E2637}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TravelData</RootNamespace>
+    <AssemblyName>TravelData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDataAccess.cs" />
+    <Compile Include="AreaDataAccess.cs" />
+    <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="GroupDataAccess.cs" />
+    <Compile Include="Group_FormedDataAccess.cs" />
+    <Compile Include="Group_RequestDataAccess.cs" />
+    <Compile Include="GuideDataAccess.cs" />
+    <Compile Include="IAdminDataAccess.cs" />
+    <Compile Include="IAreaDataAccess.cs" />
+    <Compile Include="IGroupDataAccess.cs" />
+    <Compile Include="IGroup_FormedDataAccess.cs" />
+    <Compile Include="IGroup_RequestDataAccess.cs" />
+    <Compile Include="IGuideDataAccess.cs" />
+    <Compile Include="IMoneyCalAdminDataAccess.cs" />
+    <Compile Include="IMoneyCalGuideDataAccess.cs" />
+    <Compile Include="IRatingDataAccess.cs" />
+    <Compile Include="ITourDataAccess.cs" />
+    <Compile Include="ITouristDataAccess.cs" />
+    <Compile Include="Models\Mapping\AdminMap.cs" />
+    <Compile Include="Models\Mapping\AreaMap.cs" />
+    <Compile Include="MoneyCalAdminDataAccess.cs" />
+    <Compile Include="MoneyCalGuideDataAccess.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RatingDataAccess.cs" />
+    <Compile Include="Models\Mapping\GroupMap.cs" />
+    <Compile Include="Models\Mapping\Group_FormedMap.cs" />
+    <Compile Include="Models\Mapping\Group_RequestMap.cs" />
+    <Compile Include="Models\Mapping\GuideMap.cs" />
+    <Compile Include="Models\Mapping\MoneyCalAdminMap.cs" />
+    <Compile Include="Models\Mapping\MoneyCalGuideMap.cs" />
+    <Compile Include="Models\Mapping\RatingMap.cs" />
+    <Compile Include="Models\Mapping\TouristMap.cs" />
+    <Compile Include="Models\Mapping\TourMap.cs" />
+    <Compile Include="TourDataAccess.cs" />
+    <Compile Include="TouristDataAccess.cs" />
+    <Compile Include="TravelContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TravelEntity\TravelEntity.csproj">
+      <Project>{1AFCAB9F-2B20-4661-A8EE-83F5C57D1661}</Project>
+      <Name>TravelEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
